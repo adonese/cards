@@ -13,7 +13,7 @@ var count = flag.Int("c", 5000, "number of outputted uuids")
 func generate(count int) []byte {
     var res []byte
     
-    for i := 0; i <= count; i++ {
+    for i := 1; i <= count; i++ {
         uid := uuid.New().String()
         data := []byte(uid + "\n")
         res = append(res, data...)
